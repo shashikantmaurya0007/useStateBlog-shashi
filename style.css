@@ -1,0 +1,128 @@
+:root {
+    --secondary-color: #111827;
+    --first-letter-color: #1F2937;
+    --remaining-letter-color: #9CA3AF;
+}
+
+* body {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 4vh;
+    font-family: 'Josefin Sans', sans-serif;
+    background-color: #F3F4F6
+}
+
+div {
+    color: currentColor;
+}
+
+nav {
+    background-color: var(--secondary-color);
+    color: white;
+    height: 14vh;
+    border-bottom-left-radius: 2rem;
+}
+
+nav #social-media {
+    padding: 2vw;
+}
+
+nav #social-media a {
+    float: right;
+    padding-left: 1.5vh;
+    padding-right: 1.5vh;
+}
+
+nav #social-media span {
+    display: inline-block;
+    position: absolute;
+    top: 3.5vh
+}
+
+nav #social-media a {
+    padding-left: 1.5vh;
+    padding-right: 1.5vh;
+}
+
+.first {
+    color: var(--first-letter-color);
+}
+
+header {
+    color: var(--remaining-letter-color);
+}
+
+header img {
+    display: block;
+    max-width: 30vw;
+    max-height: 15vh;
+    align-self: center;
+}
+
+header h3 {
+    display: block;
+    max-width: 75vw;
+    align-self: center;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+main div {
+    max-width: 85vw;
+    align-self: center;
+    text-align: justify;
+    margin-top: 0.8vh;
+}
+
+div img {
+    display: inline-block;
+    overflow-y: scroll;
+}
+
+div#js-image {
+    overflow: scroll;
+}
+
+footer {
+    display: flex;
+    position: relative;
+    background-color: var(--secondary-color);
+    color: white;
+    height: 16vh;
+    margin-top: 2rem;
+    justify-content: center;
+    align-content: center;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+
+footer div {
+    position: absolute;
+    max-width: 90vw;
+    text-align: center;
+    top: 2rem;
+}
+
+footer {
+    align-content: center;
+}
+
+@media screen and (max-width: 480px) {
+    body {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-size: 3vh;
+    }
+}

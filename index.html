@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./font-awesome/css/font-awesome.min.css">
+    <!-- <link rel="stylesheet" href="./font-awesome.min.css"> -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <nav>
+
+        <div id="social-media">
+            <span> Shashi..<i class="fa fa-male" aria-hidden="true"></i></span>
+
+            <a><i class="fa fa-github fa-2x" aria-hidden="true"></i></a>
+            <a> <i class="fa fa-linkedin fa-2x" aria-hidden="true"></i></a>
+            <a><i class="fa fa-instagram fa-2x" aria-hidden="true" ></i></a>
+
+            <a></a>
+
+
+        </div>
+
+    </nav>
+    <div>
+
+    </div>
+    <header>
+        <img src="./blogheaderimg.svg" alt="">
+        <h3>
+
+            <Span class="first">B</Span>log on
+            <Span class="first">U</Span>seState
+        </h3>
+
+    </header>
+    <main>
+        <div>Before understanding <span class="high">useState</span> functionality of React .lets understand <span class="high"> Why <b>React</b> 
+                included this functionality? <span>. First of all you should know <b>React is declarative!</b>
+        <br>
+       <b>Wait if you are wondering what is declarative  ?</b>
+       <br><br>
+        React is declarative because you write the code that you want and React is in charge of taking our declared code and performing all of the 
+        <b>Javascript</b> steps to get you to your desired result. <br>
+    </div>
+       <div> If you are thinking that you still write some logic in React .you are right no component till now is complete declarative.  </div>
+       <div class="high"> 
+        Lets understand the problem of vanilla-js which React is solving through useState
+       </div>
+       <div>
+        Consider a problem where you have given a <span class="high">variable num </span>which exist in <b>global</b> scope and the code somewhat looks like stated below.
+        </div>
+        <div id="js-image">
+            <img src="./vanillajs.png" alt="">
+        </div>
+
+        <div>
+            In the above code you have created <span class="high">three h1 elements with “id” one ,two ,three respectively. </span> And one <span class="high">button with <b>onclick</b> event handler calling <b>buttonClicked()</b></span>
+
+        </div>
+        <div>
+            <span class="high">Let me run you through Javascript code </span>
+        </div>
+
+        <div>
+            you have created variable <b>“var num=1 “</b> in global scope and then getting the element <b>h1</b> by selecting using getElementById and trying to change the innerText with "num1" value. If you see the output initially you are getting <b>“1”</b>            which is the value of global scope variable num1.
+        </div>
+        <div>
+
+            The catch comes here when you click on the button and <b>buttonClicked()</b>function is called where, You are incrementing the value of <b>"num1"</b> and trying to console the value of "num1". In console you are getting the incremented value
+            of “num1” where as <b>h1.innerText is not getting the current state of num1</b>.
+        </div>
+        <div>
+            The reason behind this is once the code is run it do not render again unless you explicitly put the logic in function and call that function once the state is changed to display the changes.
+
+        </div>
+        <div>
+            <b>Don’t you feel it is more tedious work for the programer.</b>
+            <span class="high">HERE REACT COMES LIKE SUPERHERO TO SOLVE YOUR PROBLEM.</span>
+        </div>
+        <div>
+            This functionality react will be achieving with useState().
+        </div>
+        <div>
+            <p>useState is react component.so lets understand useState functionality.</p>
+        </div>
+        <div>
+            So basically useState() require the initial state and it will be returning array with two value one variable with current state value and one function to change that value.
+        </div>
+        <div>
+            If the above statements seems confusing to you it would be much clear when you see the below code.
+        </div>
+        <div id="js-image">
+            <img src="./reactuseState.png" alt="">
+        </div>
+        <div>
+
+            const[num,setNum]=useState(1);<br> so in the above code "1 " is the initial value and <b>num</b> is the variable which is assiged with initial value. and <span class="high">setNum</span> is the function which updates the value of num.
+        </div>
+        <div>
+            so WhenButton is clicked setNum function <b>*which is provided by useState*</b> is executed and there you are incrementing the value of <b>num1</b>
+        </div>
+        <div>
+            Everytime setNum is called it generate a new state for <span class="high">num</span> and React beautifully render and replace num used in code with current state. which saves lots of energy and brain of programmer.
+
+        </div>
+        <div>
+            <span class="high"><b>" you can understand useState as whenever state changes React please react on it" <i class="fa fa-handshake-o" aria-hidden="true"></i> </b></span>
+        </div>
+
+    </main>
+
+
+
+    <footer>
+
+        <div>&copy; Copyright 2021 ,if you find any wrong information here please reach out to me </div>
+
+
+    </footer>
+
+</body>
+
+</html>
